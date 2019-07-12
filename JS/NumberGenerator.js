@@ -29,9 +29,22 @@ class NumberGenerator {
 		return results;
 
 	}
+	trueFalse (){
+		
+		/*var results =this.throwDice(2,10);
+		var element = results[0];
+		console.log(results);
+		if (element %2==0) {
+			return true
+		} else {
+			return false
+		}*/
+		return Math.round(Math.random()) === 0;
+	}
 }
 window.numberGenerator = new NumberGenerator();
-console.log(numberGenerator.throwDice(5,10));
-console.log(numberGenerator.throwDiceWithSum(5,4));
-console.log(numberGenerator.throwDiceWithLimit(5,8,2));
+//console.log(numberGenerator.throwDice());
+//console.log(numberGenerator.throwDiceWithSum(5,4));
+//console.log(numberGenerator.throwDiceWithLimit(5,8,2));
+console.log(numberGenerator.trueFalse());
 
