@@ -42,9 +42,16 @@ class NumberGenerator {
 		return Math.round(Math.random()) === 0;
 	}
 }
+
 window.numberGenerator = new NumberGenerator();
 //console.log(numberGenerator.throwDice());
 //console.log(numberGenerator.throwDiceWithSum(5,4));
 //console.log(numberGenerator.throwDiceWithLimit(5,8,2));
-console.log(numberGenerator.trueFalse());
-
+/*console.log(numberGenerator.trueFalse());
+var sum = 0;
+for (var i = 0; i < 1000000; i++) {
+	if(numberGenerator.trueFalse()){
+		++sum;
+	}
+}
+console.log(sum/1000000+"%");*/
