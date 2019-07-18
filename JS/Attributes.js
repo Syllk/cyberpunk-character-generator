@@ -10,5 +10,5 @@ class Attributes {
     this.empathy = empathy;
     this.bodyBuilt = bodyBuilt;
 }
-
+}
 
