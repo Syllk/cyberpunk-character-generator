@@ -1,44 +1,45 @@
 class SecondaryAttributesGenerator {
-	generateRunJmpWgh(){
-		var numberSet = numberGenerator.throwDiceWithLimit(9,10,2);
+	generateRunJmpWgh(attributes){
+		//var numberSet = numberGenerator.throwDiceWithLimit(n,sides,minValue);
 		//console.log(numberSet);
-		var speed = numberSet[6];
+
+		var speed = attributes.speed;
 		var jmp = speed / 4;
-		var wgh = numberSet[8]*10
+		var wgh = attributes.bodyBuilt*10
 		return "RUN: " + speed * 3 + ", JMP: " + jmp + " WGH: " + wgh;
 
 	}
-	bodyBuiltModifier(){
-		var numberSet = numberGenerator.throwDiceWithLimit(9,10,2);
+	bodyBuiltModifier(attributes){
+		//var numberSet = numberGenerator.throwDiceWithLimit();
 		//console.log(numberSet);
-		var bb = numberSet[8];
+		var bb = attributes.bodyBuilt;
 		//console.log(bb);
 		var mod;
 		switch (bb) {
 			case 2:
-			mod = "Very weak (0)";
+			mod = 0;
 			break;
 			case 3:
 			case 4:
-			mod = "Weak (-1)";
+			mod = -1;
 			break;
 			case 5:
 			case 6:
 			case 7:
-			mod = "Avarage (-2)";
+			mod = -2;
 			break;
 			case 8:
 			case 9:
-			mod = "Strong (-3)";
+			mod = -3;
 			break;
 			case 10:
-			mod = "Very strong (-4)";
+			mod = -4;
 			
 		} 
 		return mod;
 	}	
 }
-
+var attributes = attributesGenerator.generateAttributes();
 window.secondaryAttributesGenerator = new SecondaryAttributesGenerator();
 
 /*BC ranges based on bodybuilding for BBM/MBC =>
@@ -48,3 +49,6 @@ window.secondaryAttributesGenerator = new SecondaryAttributesGenerator();
 8-9p = Strong(-3)
 10p = Very Strong(-4)
 Superhuman(-5) - only avaliable with Cybernetics - to skip for now*/
+
+//secondaryAttributesGenerator.generateRunJmpWgh(attributesGenerator.generateAttributes())
+//secondaryAttributesGenerator.bodyBuiltModifier(attributesGenerator.generateAttributes())

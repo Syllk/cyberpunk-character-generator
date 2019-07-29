@@ -8,7 +8,7 @@ var clothingHairSymbol = [
 ["wojskowe", "farbowane", "długie paznokcie"],
 ["normalne", "schludne, krótkie", "buty z kolcami"],
 ["nudystyczne", "krótkie, kręcone", "dziwne szkła kontaktowe"],
-["staroświeckie", "długie, proste", "rękawice bez palców"];
+["staroświeckie", "długie, proste", "rękawice bez palców"]];
 
 var ethnicBackground = ["anglo-amerykańskie (angielski)", 
 "afrykańskie (bantu, fante, kongo, ashanti, zulu, swahili)", 
