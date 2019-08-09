@@ -1,14 +1,8 @@
-var clothingHairSymbol = [
-["naturalne skóry", "kolce", "tatuaże"],
-["niebieskie jeansy", "długi warkocz", "lustrzanki"],
-["garnitur", "krótkie na jeża, rytualne","blizny"],
-["wyskokowe", "dzikie i bujne", "ćwiekowane rękawice"],
-["krótka spódnica", "łysy", "pierścień w nosie"],
-["ekskluzywne", "czub", "kolczyki"],
-["wojskowe", "farbowane", "długie paznokcie"],
-["normalne", "schludne, krótkie", "buty z kolcami"],
-["nudystyczne", "krótkie, kręcone", "dziwne szkła kontaktowe"],
-["staroświeckie", "długie, proste", "rękawice bez palców"]];
+var clothing = ["naturalne skóry", "niebieskie jeansy", "garnitur", "wyskokowe", "krótka spódnica", "ekskluzywne", "ekskluzywne", "wojskowe", "normalne", "nudystyczne", "staroświeckie"];
+
+var hair = ["kolce", "długi warkocz", "krótkie na jeża", "dzikie i bujne", "łysy", "czub", "farbowane", "schludne, krótkie", "krótkie, kręcone", "długie, proste"];
+
+var symbol = ["tatuaże", "lustrzanki", "rytualne blizny", "ćwiekowane rękawice", "pierścień w nosie", "kolczyki", "długie paznokcie", "buty z kolcami", "dziwne szkła kontaktowe", "rękawice bez palców"];
 
 var ethnicBackground = ["anglo-amerykańskie (angielski)", 
 "afrykańskie (bantu, fante, kongo, ashanti, zulu, swahili)", 
@@ -25,3 +19,36 @@ var parentsSocialStatus = ["Dyrektor korporacji", "Manager korporacji", "Technik
 "Flota piracka", "Gang", "Książę zbrodni", "Biedota za strefy walki", "Miejski bezdomny", 
 "Rodzina z arkologii"];
 
+var parentsStatus = ["Coś się stało obajgu rodzicom", "Oboje żyją", "Coś się stało matce", "Coś się stało ojcu"];
+
+var whatHappenedToParents = ["Twój rodzic(e) zginął na wojnie", "Twój rodzic(e) zginął w wypadku", "Twój rodzic(e) został zamordowany",
+"Twój rodzic(e) ma amnezję i cię nie pamięta", "Nigdy nie znałeś swojego rodzica(ów)", "Rodzic(e) ukrywają się, by cię chronić", "Zostałeś oddany krewnym na przechowanie", 
+"Wyrosłeś na ulicy i nigdy nie miałeś rodziców", "Rodzice oddali cię do adopcji", "Rodzice sprzedali cię dla pieniędzy"];
+
+class StyleGenerator{
+	genClothing(){
+	//var lengthClothing = clothing.length;
+	//console.log(lengthClothing);
+	return clothing[numberGenerator.throwDice(1, clothing.length)];
+	}
+	genHair(){
+	return hair[numberGenerator.throwDice(1, hair.length)];
+	}
+	genSymbol(){
+	return symbol[numberGenerator.throwDice(1, symbol.length)];	
+	}
+	genEthnicalBacground(){
+	return ethnicBackground[numberGenerator.throwDice(1, ethnicBackground.length)];
+	}
+	genParentsSocialStatus(){
+	return parentsSocialStatus[numberGenerator.throwDice(1, parentsSocialStatus.length)];
+	}
+	genParentsStatus(){
+	return parentsStatus[numberGenerator.throwDice(1, parentsStatus.length)];
+	}
+	genWhatHappenedToParents(){
+	return whatHappenedToParents[numberGenerator.throwDice(1, whatHappenedToParents.length)];
+	}
+}
+window.styleGenerator = new StyleGenerator();
+//console.log(genClothing());

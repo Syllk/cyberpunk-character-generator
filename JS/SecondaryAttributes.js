@@ -10,7 +10,7 @@ class SecondaryAttributesGenerator {
 
 	}
 	bodyBuiltModifier(attributes){
-		//var numberSet = numberGenerator.throwDiceWithLimit();
+		//var numberSet = numberGenerator.throwDiceWithLimit(); - nie potrzebne bo czerpiemy dane z generatora atrybutów
 		//console.log(numberSet);
 		var bb = attributes.bodyBuilt;
 		//console.log(bb);
@@ -51,4 +51,6 @@ window.secondaryAttributesGenerator = new SecondaryAttributesGenerator();
 Superhuman(-5) - only avaliable with Cybernetics - to skip for now*/
 
 //secondaryAttributesGenerator.generateRunJmpWgh(attributesGenerator.generateAttributes())
+//secondaryAttributesGenerator.generateRunJmpWgh(attributes)
 //secondaryAttributesGenerator.bodyBuiltModifier(attributesGenerator.generateAttributes())
+//secondaryAttributesGenerator.bodyBuiltModifier(attributes)
